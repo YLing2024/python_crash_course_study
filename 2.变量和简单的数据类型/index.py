@@ -67,3 +67,42 @@ var1,var2,var3 = 1,2,3; # 同时给三个变量赋值
 print(var1);
 print(var2);
 print(var3);
+
+# 变量是可以有类型标注的，下面是常见的内置类型，python的数据类型没有任何强制性，仅仅是文档层面的标注，python解释器不会检查变量的类型是否匹配
+# 如果要做类型的静态检查，需要依赖类型检查工具，比如mypy
+a: int = 10
+b: int = -5
+c: int = 0x10  # 十六进制（16）
+d: int = 0o10  # 八进制（8）
+e: int = 0b10  # 二进制（2）
+f: float = 3.14
+g: float = 1.2e5  # 科学计数法（120000.0）
+h: float = -0.0001
+i: complex = 3 + 4j
+j: complex = 1.5j  # 纯虚数（实部为0）
+k: bool = True
+l: bool = False
+m: None = None
+n: str = "Hello"
+o: str = 'Python'
+p: str = """多行字符串"""
+q: list = [1, "a", True, 3.14]
+r: list = []  # 空列表
+s: tuple = (1, 2, 3)
+t: tuple = (4,)  # 单元素元组需加逗号
+u: tuple = ()  # 空元组
+v: set = {1, 2, 3}
+w: set = set([1, 2, 2, 3])  # 去重后 {1,2,3}
+x: set = set()  # 空集合（不能用 {}，{} 是字典）
+y: frozenset = frozenset({1, 2, 3}) # 冻结集合，不可变
+z: dict = {"name": "Alice", "age": 20}
+aa: dict = {}  # 空字典
+ab: dict = dict(name="Bob", age=25)  # 另一种创建方式
+ac: bytes = b"hello"  # 前缀 b 表示字节串
+ad: bytes = bytes([104, 101, 108, 108, 111])  # 对应 "hello"，字节串
+ae: bytearray = bytearray(b"hello")# 直接数字
+af: range = range(10)  # 0-9
+ag: range = range(1, 10, 2)  # 1,3,5,7,9
+ah: bytes = b"Python"
+ai: memoryview = memoryview(ah)
+print(ai[0])  # 输出 80（'P' 的 ASCII 码）
