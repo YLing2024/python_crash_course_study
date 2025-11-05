@@ -56,15 +56,18 @@ for item in items:
 # 如果直接遍历字典，获取的是key，和遍历keys完全等价
 for key in testDict:
     print(key);
-# items很特殊，可以拿两个变量来接受，就可以得到两个值，这里实际上是自动解包的语法糖
+# items很特殊，可以拿两个变量来接受，就可以得到两个值
 for key,value in items:
     print(key,value);
+# 上面的写法本质上是自动解包的语法糖，自动解包类似于js的解构赋值
+for item in items:
+    key,value = item;# 可以直接手动解包
+    print(key,value);
+    print(item[0],item[1]);# 由于是元组，也可以按照元组的方式访问
 
 # python提供了集合类型
 setTest = set([1,2,3,4,5,6,1,2,3,4,5]);
 print(setTest); # 自动去重
-setTest2 = {1,2,3,4,5,6,7,8,9,10};# 集合可以直接写字面量
+setTest2 = {1,2,3,4,5,6,7,8,9,10,1};# 集合可以直接写字面量
 print(setTest2);
-
-
 
