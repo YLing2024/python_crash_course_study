@@ -70,4 +70,3 @@ setTest = set([1,2,3,4,5,6,1,2,3,4,5]);
 print(setTest); # 自动去重
 setTest2 = {1,2,3,4,5,6,7,8,9,10,1};# 集合可以直接写字面量
 print(setTest2);
-

@@ -22,6 +22,7 @@ class Dog:
         print(f"{self.name} is now sitting");
 
 # 创建对象的时候，会自动调用构造函数，将参数从第二个开始传递
+# python中创建对象不需要new
 new_dog = Dog("Willie",6);
 print(new_dog.name,new_dog.age);
 # 和js一样，对象的状态可以乱改
